@@ -1,15 +1,24 @@
 #include "main.h"
 /**
-*print_last_digit - function that print last digit of a number
-*@n: number to be targeted
-*Return: returns 0
+*print_sign-prints sign of a number
+*@n: character to be verified
+*Return: return 0 or 1
 */
-int print_last_digit(int n)
+int print_sign(int n)
 {
-int lastdigit = n % 10;
-if (lastdigit < 0)
-lastdigit *= -1;
-
-_putchar (lastdigit + '0');
-return (lastdigit);
+if (n == 0)
+{
+_putchar('0');
+return (0);
+}
+else if (n > 0)
+{
+_putchar('+');
+return (1);
+}
+else
+{
+_putchar('-');
+return (-1);
+}
 }
